@@ -61,7 +61,7 @@ project-name/
 ## Contributors
 - Abdullah  - CST student at BCIT, love algorithms, excited to learn more about tech world.
 - Hi I am Qian Zhang- BCIT CST Student with a passion for creating user-friendly applications. Fun fact: Loves solving Rubik's Cubes in under a minute.
-- Kevin - I love dogs
+- Hola my name is Kevin - I'm excited to launch our app to the world. 
 
 ## Acknowledgments
 
