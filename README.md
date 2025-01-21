@@ -59,7 +59,7 @@ project-name/
 ---
 
 ## Contributors
-- Abdullah  - BCIT CST Student, Frontend enthusiast with a knack for creative design. Fun fact: Has a collection of over 50 houseplants.
+- Abdullah  - CST student at BCIT, love algorithms, excited to learn more about tech world.
 - Hi I am Qian Zhang- BCIT CST Student with a passion for creating user-friendly applications. Fun fact: Loves solving Rubik's Cubes in under a minute.
 - Kevin - I love dogs
 
