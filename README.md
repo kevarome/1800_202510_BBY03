@@ -59,16 +59,10 @@ project-name/
 ---
 
 ## Contributors
-<<<<<<< HEAD
-- Hi I am Qian Zhang - BCIT CST Student with a passion for creating user-friendly applications. Fun fact: Loves solving Rubik's Cubes in under a minute.
-- **Teammate Name** - BCIT CST Student, Frontend enthusiast with a knack for creative design. Fun fact: Has a collection of over 50 houseplants.
-
----
-=======
 - Abdullah  - CST student at BCIT, love algorithms, excited to learn more about tech world.
-- Hi I am Qian Zhang- BCIT CST Student with a passion for creating user-friendly applications. Fun fact: Loves solving Rubik's Cubes in under a minute.
-- Kevin - I love dogs
->>>>>>> c48910ba87536c0eda356584827e810ec4e81be5
+- Hi I am Qian Zhang I really love work with my teammates and I love hiking.
+- Hola my name is Kevin - I'm excited to launch our app to the world. 
+
 
 ## Acknowledgments
 
