@@ -8,3 +8,8 @@ e8ebf1
 Aditional colors:
 #B0D6FF
 */
+/* CSS for nav after login - profile icon */
+
+i.fa-solid.fa-circle-user.profile-icon {
+    font-size: 3rem;
+}
