@@ -24,6 +24,7 @@
 }*/
 // Function to read the quote of the day from the Firestore "quotes" collection
 // Input param is the String representing the day of the week, aka, the document name
+
 function readQuote(day) {
     db.collection("quotes").doc(day)                                                         //name of the collection and documents should matach excatly with what you have in Firestore
         .onSnapshot(dayDoc => {                                                              //arrow notation
@@ -142,4 +143,4 @@ function insertNameFromFirestore() {
     })
 }
 insertNameFromFirestore();
-getNameFromAuth(); //run the function
+//getNameFromAuth(); //run the function
