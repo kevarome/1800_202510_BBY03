@@ -20,34 +20,7 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
-                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                <a class="navbar-brand" href="#"><img src="../images/logo.png" alt="logo" width="60px"></a>
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="./homepage.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Calendar</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Maps</a>
-                    </li>
-                </ul>
-                <div class="dropdown">
-                    <button class="btn btn-light border-0" type="button" id="profileDropdown" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        <i class="fa-solid fa-circle-user profile-icon" style="font-size: 3rem;"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <nav id="navbarPlaceholder"></nav>
 
     <!-- Calendar Container -->
     <div class="container mt-4">
@@ -90,6 +63,8 @@
             calendar.render();
         });
     </script>
+        <!-- our own footer goes here-->
+        <nav id="footerPlaceholder"></nav>
     <!---------------------------------------------->
     <!-- Your own JavaScript functions go here    -->
     <!---------------------------------------------->
