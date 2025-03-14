@@ -35,7 +35,9 @@
   <!-------------------------------------------->
   <!-- Other libraries and styles of your own -->
   <!-------------------------------------------->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/00f9f39e3b.js" crossorigin="anonymous"></script>
+
   <link rel="stylesheet" href="./styles/style.css">
 
 </head>
@@ -46,56 +48,56 @@
   <!------------------------------>
 
   <!-- our own navbar goes here -->
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
-              aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+        aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <a class="navbar-brand" href="#"><img src="../images/logo.png" alt="logo" width="60px"></a>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./calendar.html">Calendar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Maps</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./medication_form.html">Add</a>
+          </li>
+        </ul>
+        <div class="dropdown">
+          <button class="btn btn-light border-0" type="button" id="profileDropdown" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <i class="fa-solid fa-circle-user profile-icon" style="font-size: 3rem;"></i>
           </button>
-          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-              <a class="navbar-brand" href="#"><img src="../images/logo.png" alt="logo" width="60px"></a>
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="./calendar.html">Calendar</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Maps</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./medication_form.html">Add</a>
-                </li>
-              </ul>
-              <div class="dropdown">
-                  <button class="btn btn-light border-0" type="button" id="profileDropdown" data-bs-toggle="dropdown"
-                      aria-expanded="false">
-                      <i class="fa-solid fa-circle-user profile-icon" style="font-size: 3rem;"></i>
-                  </button>
-              </div>
-          </div>
+        </div>
       </div>
+    </div>
   </nav>
-<!--Div to welcome user-->
+  <!--Div to welcome user-->
   <div class="container-fluid bg-light text-dark p-5">
     <div class="container bg-light p-5">
-        <h1 class="display-4">Hello, <span id="name-goes-here"></span></h1>
+      <h1 class="display-4">Hello, <span id="name-goes-here"></span></h1>
     </div>
-</div>
-<!--Current Medication-->
+  </div>
+  <!--Current Medication-->
   <div class="alert alert-primary" role="alert">
-       <p>9:00          Vitamin D</p>
+    <p>9:00 Vitamin D</p>
   </div>
   <div class="alert alert-secondary" role="alert">
-       <p>11:30         Vitamin E</p>
+    <p>11:30 Vitamin E</p>
   </div>
   <div class="alert alert-success" role="alert">
-       <p>16:30         Tylenol</p>
+    <p>16:30 Tylenol</p>
   </div>
   <div class="alert alert-danger" role="alert">
-       <p>20:30         Adivl</p>
+    <p>20:30 Adivl</p>
   </div>
 
   <!-- our own footer goes here-->
