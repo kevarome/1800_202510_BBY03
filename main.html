@@ -21,6 +21,7 @@
 
     </script>
 
+
   <!-------------------------------------------------------->
   <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
   <!-------------------------------------------------------->
@@ -31,12 +32,14 @@
   <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
   <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta4/dist/js/bootstrap.bundle.min.js"></script>
 
   <!-------------------------------------------->
   <!-- Other libraries and styles of your own -->
   <!-------------------------------------------->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
   <link rel="stylesheet" href="./styles/style.css">
+  
 
 </head>
 
@@ -65,9 +68,9 @@
                   <li class="nav-item">
                       <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Maps</a>
                   </li>
-                  <li class="nav-item">
+                  <!-- <li class="nav-item">
                     <a class="nav-link" href="./medication_form.html">Add</a>
-                </li>
+                </li> -->
               </ul>
               <div class="dropdown">
                   <button class="btn btn-light border-0" type="button" id="profileDropdown" data-bs-toggle="dropdown"
@@ -84,19 +87,86 @@
         <h1 class="display-4">Hello, <span id="name-goes-here"></span></h1>
     </div>
 </div>
-<!--Current Medication-->
-  <div class="alert alert-primary" role="alert">
-       <p>9:00          Vitamin D</p>
+
+
+<section class="vh-100" style="background-color: #D2DDEC;">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col col-xl-10">
+
+        <div class="card" style="border-radius: 15px;">
+          <div class="card-body p-5">
+
+            <h6 class="mb-3">Medication Reminder</h6>
+
+            <form class="d-flex justify-content-center align-items-center mb-4">
+              <div data-mdb-input-init class="form-outline flex-fill">
+                <input type="text" id="form3" class="form-control form-control-lg" />
+                <label class="form-label" for="form3">What do you need to take today?</label>
+              </div>
+              <a href="./medication_form.html" class="btn btn-primary btn-lg ms-2">Add</a> 
+            </form>
+
+            <ul class="list-group mb-0">
+              <li
+                class="list-group-item d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2">
+                <div class="d-flex align-items-center">
+                  <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." />
+                  <s>9:00  Aspirin</s>
+                </div>
+                <a href="#!" data-mdb-tooltip-init title="Remove item">
+                  <i class="fas fa-times text-primary"></i>
+                </a>
+              </li>
+              <li
+                class="list-group-item d-flex d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2">
+                <div class="d-flex align-items-center">
+                  <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." checked />
+                  <s>11:00 Vitamin D</s>
+                </div>
+                <a href="#!" data-mdb-tooltip-init title="Remove item">
+                  <i class="fas fa-times text-primary"></i>
+                </a>
+              </li>
+              <li
+                class="list-group-item d-flex d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2">
+                <div class="d-flex align-items-center">
+                  <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." />
+                 15:00  Amoxicillin
+                </div>
+                <a href="#!" data-mdb-tooltip-init title="Remove item">
+                  <i class="fas fa-times text-primary"></i>
+                </a>
+              </li>
+              <li
+                class="list-group-item d-flex d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2">
+                <div class="d-flex align-items-center">
+                  <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." />
+                  18:00  Metformin
+                </div>
+                <a href="#!" data-mdb-tooltip-init title="Remove item">
+                  <i class="fas fa-times text-primary"></i>
+                </a>
+              </li>
+              <li
+                class="list-group-item d-flex d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-0">
+                <div class="d-flex align-items-center">
+                  <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." checked />
+                 21:00   Lisinopril
+                </div>
+                <a href="#!" data-mdb-tooltip-init title="Remove item">
+                  <i class="fas fa-times text-primary"></i>
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
   </div>
-  <div class="alert alert-secondary" role="alert">
-       <p>11:30         Vitamin E</p>
-  </div>
-  <div class="alert alert-success" role="alert">
-       <p>16:30         Tylenol</p>
-  </div>
-  <div class="alert alert-danger" role="alert">
-       <p>20:30         Adivl</p>
-  </div>
+</section>
 
   <!-- our own footer goes here-->
   <div class="container">

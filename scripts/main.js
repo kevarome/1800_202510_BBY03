@@ -18,3 +18,7 @@ function insertNameFromFirestore() {
 }
 insertNameFromFirestore();
 //getNameFromAuth(); //run the function
+
+
+//mmedication js
+
