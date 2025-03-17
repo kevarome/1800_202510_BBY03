@@ -23,7 +23,7 @@ function insertMedicineNameFromFirestore() {
     firebase.auth().onAuthStateChanged(user => {
         if (user) {
             console.log(user.uid); // Let's know who the logged-in user is by logging their UID
-            currentUser = db.collection("users").doc(user.uid); // Go to the Firestore document of the user
+            currentUser = db.collection("medications").doc(user.uid); // Go to the Firestore document of the user
             currentUser.get().then(userDoc => {
                 // Get the user name
                 let medicineName = userDoc.data().medicineName;

@@ -24,11 +24,11 @@ function addMedication() {
 
     var user = firebase.auth().currentUser;
     if (user) {
-    // Adding prescription data
-    var currentUser = db.collection('users').doc(user.uid);
-    var userID = user.uid;
 
-    db.collection('medications').add({
+    // Adding prescription data
+    var userID = user.uid;
+    // Adding prescription data
+    db.collection('users').doc(user.uid).collection('medications').add({
       medicineName: medicineName,
       intakeInterval: intakeInterval,
       dosage: dosage,
@@ -54,5 +54,7 @@ function addMedication() {
 
 
 // Adding event listener for "Add" button
-document.getElementById('addButton').addEventListener('click', addMedication);
+document.getElementById('addButton').addEventListener('click', (e)=>{
+    addMedication();
+});
 
