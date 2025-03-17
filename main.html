@@ -50,34 +50,8 @@
 
   <!-- our own navbar goes here -->
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
-              aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-              <a class="navbar-brand" href="#"><img src="../images/logo.png" alt="logo" width="60px"></a>
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="./calendar.html">Calendar</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Maps</a>
-                  </li>
-              </ul>
-              <div class="dropdown">
-                  <button class="btn btn-light border-0" type="button" id="profileDropdown" data-bs-toggle="dropdown"
-                      aria-expanded="false">
-                      <i class="fa-solid fa-circle-user profile-icon" style="font-size: 3rem;"></i>
-                  </button>
-              </div>
-          </div>
-      </div>
-  </nav>
+    <nav id="navbarPlaceholder"></nav>
+
 <!--Div to welcome user-->
 
 
@@ -101,7 +75,7 @@
                 <input type="text" id="form3" class="form-control form-control-lg" />
                 <label class="form-label" for="form3">What do you need to take today?</label>
               </div>
-              <a href="./medication_form.html" class="btn btn-primary btn-lg ms-2">Add</a> 
+              <a href="./medication_form.html" class="btn btn-primary btn-lg ms-2" onclick="addMedication()">Add</a> 
             </form>
 
             <ul class="list-group mb-0">
@@ -109,7 +83,7 @@
                 class="list-group-item d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2">
                 <div class="d-flex align-items-center">
                   <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." />
-                  <s>9:00  Aspirin</s>
+                  <s>9:00  <span id="medicineName-goes-here"></span></s>
                 </div>
                 <a href="#!" data-mdb-tooltip-init title="Remove item">
                   <i class="fas fa-times text-primary"></i>
@@ -172,6 +146,7 @@
   <script src="./scripts/skeleton.js"></script>
   <script src="./scripts/script.js"></script>
   <script src="./scripts/main.js"></script>
+  <script src="./scripts/medication_form.js"></script>
 
 
   <!-- <script src="./scripts/script.js"></script> -->
