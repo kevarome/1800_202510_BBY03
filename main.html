@@ -60,83 +60,54 @@
       <h1 class="display-4">Hello, <span id="name-goes-here"></span></h1>
     </div>
 </div>
-<section class="vh-100" style="background-color: #D2DDEC;">
+
+<section class="vh-100 gradient-custom">
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col col-xl-10">
-
-        <div class="card" style="border-radius: 15px;">
+        <div class="card">
           <div class="card-body p-5">
-
-            <h6 class="mb-3">Medication Reminder</h6>
-
-            <form class="d-flex justify-content-center align-items-center mb-4">
-              <div data-mdb-input-init class="form-outline flex-fill">
-                <input type="text" id="form3" class="form-control form-control-lg" />
-                <label class="form-label" for="form3">What do you need to take today?</label>
-              </div>
-              <a href="./medication_form.html" class="btn btn-primary btn-lg ms-2" onclick="addMedication()">Add</a> 
-            </form>
-
-            <ul class="list-group mb-0">
-              <li
-                class="list-group-item d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2">
-                <div class="d-flex align-items-center">
-                  <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." />
-                  <s>9:00  <span id="medicineName-goes-here"></span></s>
-                </div>
-                <a href="#!" data-mdb-tooltip-init title="Remove item">
-                  <i class="fas fa-times text-primary"></i>
-                </a>
-              </li>
-              <li
-                class="list-group-item d-flex d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2">
-                <div class="d-flex align-items-center">
-                  <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." checked />
-                  <s>11:00 Vitamin D</s>
-                </div>
-                <a href="#!" data-mdb-tooltip-init title="Remove item">
-                  <i class="fas fa-times text-primary"></i>
-                </a>
-              </li>
-              <li
-                class="list-group-item d-flex d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2">
-                <div class="d-flex align-items-center">
-                  <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." />
-                 15:00  Amoxicillin
-                </div>
-                <a href="#!" data-mdb-tooltip-init title="Remove item">
-                  <i class="fas fa-times text-primary"></i>
-                </a>
-              </li>
-              <li
-                class="list-group-item d-flex d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2">
-                <div class="d-flex align-items-center">
-                  <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." />
-                  18:00  Metformin
-                </div>
-                <a href="#!" data-mdb-tooltip-init title="Remove item">
-                  <i class="fas fa-times text-primary"></i>
-                </a>
-              </li>
-              <li
-                class="list-group-item d-flex d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-0">
-                <div class="d-flex align-items-center">
-                  <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." checked />
-                 21:00   Lisinopril
-                </div>
-                <a href="#!" data-mdb-tooltip-init title="Remove item">
-                  <i class="fas fa-times text-primary"></i>
-                </a>
-              </li>
-            </ul>
+            <h4 class="text-center my-3 pb-3">Today's Reminders</h4>
+            <div class="form-check">
+              <input class="form-check-input me-0" type="checkbox" value="" id="flexCheckChecked1"
+                aria-label="..." checked />
+                <p class="alert alert-primary" role="alert"> This is a primary alert—check it out!</p>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input me-0" type="checkbox" value="" id="flexCheckChecked1"
+              aria-label="..." checked />
+              <p class="alert alert-secondary" role="alert">This is a secondary alert—check it out!</p>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input me-0" type="checkbox" value="" id="flexCheckChecked1"
+              aria-label="..." checked />
+              <p class="alert alert-success" role="alert"> This is a success alert—check it out!</p>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input me-0" type="checkbox" value="" id="flexCheckChecked1"
+              aria-label="..." checked />
+              <p class="alert alert-danger" role="alert">  This is a danger alert—check it out!</p>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input me-0" type="checkbox" value="" id="flexCheckChecked1"
+              aria-label="..." checked />
+              <p class="alert alert-warning" role="alert">  This is a danger alert—check it out!</p>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input me-0" type="checkbox" value="" id="flexCheckChecked1"
+              aria-label="..." checked />
+              <p class="alert alert-light" role="alert">  This is a danger alert—check it out!</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 </section>
 
-  <!-- our own footer goes here-->
+  
+  
+            <!-- our own footer goes here-->
   <nav id="footerPlaceholder"></nav>
 
   <!---------------------------------------------->
