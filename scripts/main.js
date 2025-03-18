@@ -119,3 +119,19 @@ function insertGenderFromFirestore() {
     })
 }
 insertGenderFromFirestore();
+
+
+function addCheckboxListener(checkboxId, textId) {
+    document.getElementById(checkboxId).addEventListener('click', function () {
+        const checkbox = document.getElementById(checkboxId);
+        const text = document.getElementById(textId);
+        if (checkbox.checked) {
+            text.style.textDecoration = 'line-through';
+        } else {
+            text.style.textDecoration = 'none';
+        }
+    });
+}
+
+addCheckboxListener('flexCheckChecked1', 'Aspirin');
+addCheckboxListener('flexCheckChecked2', 'Amoxicillin');
