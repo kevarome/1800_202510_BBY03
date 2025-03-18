@@ -20,37 +20,37 @@
 <body>
 
     <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
-            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <a class="navbar-brand" href="#"><img src="../images/logo.png" alt="logo" width="60px"></a>
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="./main.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./calendar.html">Calendar</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./medication_form.html" tabindex="-1" aria-disabled="true">Add</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./profile.html" tabindex="-1" aria-disabled="true">Profile</a>
-                </li>
-            </ul>
-            <div class="dropdown">
-                <button class="btn btn-light border-0" type="button" id="profileDropdown" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    <i class="fa-solid fa-circle-user profile-icon" style="font-size: 3rem;"></i>
-                </button>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <a class="navbar-brand" href="#"><img src="../images/logo.png" alt="logo" width="60px"></a>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./main.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./calendar.html">Calendar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./medication_form.html" tabindex="-1" aria-disabled="true">Add</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./profile.html" tabindex="-1" aria-disabled="true">Profile</a>
+                    </li>
+                </ul>
+                <div class="dropdown">
+                    <button class="btn btn-light border-0" type="button" id="profileDropdown" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="fa-solid fa-circle-user profile-icon" style="font-size: 3rem;"></i>
+                    </button>
+                </div>
             </div>
         </div>
-    </div>
-</nav>
+    </nav>
     <nav id="navbarPlaceholder"></nav>
 
     <!-- Calendar Container -->
@@ -67,33 +67,7 @@
     <!-- FullCalendar JS -->
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.5/main.min.js"></script>
 
-    <!-- Calendar Script -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var calendarEl = document.getElementById('calendar');
-            var calendar = new FullCalendar.Calendar(calendarEl, {
-                initialView: 'dayGridMonth', // monthly view
-                headerToolbar: {
-                    left: 'prev,next today',
-                    center: 'title',
-                    right: 'dayGridMonth,timeGridWeek,timeGridDay' // change the view
-                },
-                events: [
-                    {
-                        title: 'Meeting',
-                        start: '2024-03-10T10:00:00',
-                        end: '2024-03-10T12:00:00'
-                    },
-                    {
-                        title: 'Conference',
-                        start: '2024-03-15',
-                        end: '2024-03-17'
-                    }
-                ]
-            });
-            calendar.render();
-        });
-    </script>
+
     <!-- our own footer goes here-->
     <nav id="footerPlaceholder"></nav>
     <!---------------------------------------------->
