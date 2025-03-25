@@ -53,46 +53,43 @@
       <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
           <div class="col col-lg-6 mb-4 mb-lg-0">
-            <div class="card mb-3" style="border-radius: .5rem;">
+            <div class="card mb-3" style="border-radius: .5rem; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
               <div class="row g-0">
-                <div class="col-md-4 gradient-custom text-center text-white"
-                  style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
-                  <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
-                    alt="Avatar" class="img-fluid my-5" style="width: 80px;" />
-                  <h5 style="color: black;"><span id="name-goes-here"></span></h5>
-                  <a href="./editProfile.html">
-                    <p style="color: black;"> <i class="fas fa-edit"></i></p>
-                  </a>
-                  <i class="far fa-edit mb-5"></i>
+                <!-- Left side image area with background color set to #6e6eaf -->
+                <div class="col-md-4 gradient-custom text-center text-white" style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem; background-color: #6e6eaf;">
+                  <!-- Profile picture -->
+                  <img id="profileImage" src="" alt="Profile Picture" class="img-fluid my-5" style="width: 100px; border-radius: 50%;" />
+                  <!-- Edit profile button -->
+                  <a href="editProfile.html" class="btn btn-outline-light btn-sm mt-2">
+                    <i class="fas fa-edit"></i> Edit Profile
+                  </a>                    
+                  <h5 class="mt-3" style="color: white; font-weight: 600;">
+                    <span id="name-goes-here"></span>
+                  </h5>
                 </div>
+                <!-- Right side information area -->
                 <div class="col-md-8">
                   <div class="card-body p-4">
-                    <h6>Information</h6>
+                    <h6 style="font-weight: 600;">Information</h6>
                     <hr class="mt-0 mb-4">
                     <div class="row pt-1">
                       <div class="col-6 mb-3">
                         <h6>Email</h6>
-                        <h7><span id="email-goes-here"></span></h7>
-                        <p class="text-muted"><span id="emailInput"></span></p>
+                        <p class="text-muted" id="email-goes-here"><span id="emailInput"></span></p>
                       </div>
                       <div class="col-6 mb-3">
                         <h6>Phone</h6>
-                        <h7><span id="phone-goes-here"></span></h7>
-                        <p class="text-muted"><span id="phoneInput"></span></p>
+                        <p class="text-muted" id="phone-goes-here"><span id="phoneInput"></span></p>
                       </div>
                     </div>
-                    <!-- <h6>Projects</h6>
-                    <hr class="mt-0 mb-4"> -->
                     <div class="row pt-1">
                       <div class="col-6 mb-3">
                         <h6>Age</h6>
-                        <h7><span id="age-goes-here"></span></h7>
-                        <p class="text-muted"><span id="ageInput"></span></p>
+                        <p class="text-muted" id="age-goes-here"><span id="ageInput"></span></p>
                       </div>
                       <div class="col-6 mb-3">
                         <h6>Gender</h6>
-                        <h7><span id="gender-goes-here"></span></h7>
-                        <p class="text-muted"><span id="genderInput"></span></p>
+                        <p class="text-muted" id="gender-goes-here"><span id="genderInput"></span></p>
                       </div>
                     </div>
                   </div>
@@ -103,7 +100,6 @@
         </div>
       </div>
     </section>
-
   <!-- our own footer goes here-->
     <!-- our own footer goes here-->
     <nav id="footerPlaceholder"></nav>
@@ -115,8 +111,7 @@
   <script src="./scripts/skeleton.js"></script>
   <script src="./scripts/script.js"></script>
   <script src="./scripts/main.js"></script>
-  <script>
-  </script>
+  <script src="./scripts/profile.js"></script>
   <!-- <script src="./scripts/script.js"></script> -->
  
 
