@@ -28,7 +28,7 @@ function insertMedicationFromFirestore() {
             medicationsRef.limit(1).get().then(querySnapshot => {
                 if (!querySnapshot.empty) {
                     let medicationDoc = querySnapshot.docs[0]; // Get the first document
-                    let medicationName = medicationDoc.data()?.name || "No Medication Found"; // Default message if name is missing
+                    let medicationName = medicationDoc.data()?.medicineName || "No Medication Found"; // Default message if name is missing
 
                     let medicationElement = document.getElementById("medication-goes-here");
                     if (medicationElement) {
