@@ -26,3 +26,28 @@ firebase.auth().onAuthStateChanged(user => {
         console.log("No user is signed in.");
     }
 });
+var currentUser; //points to the document of the user who is logged in
+function showProfilePic() {
+  firebase.auth().onAuthStateChanged((user) => {
+    // Check if user is signed in:
+    if (user) {
+      //go to the correct user document by referencing to the user uid
+      currentUser = db.collection("users").doc(user.uid);
+      //get the document for current user.
+      currentUser.get().then((userDoc) => {
+        //get the data fields of the user
+
+        let userImage = userDoc.data().profileImage;
+
+
+        if (userImage != null) {
+          document.getElementById("uploadPhoto").src = "data:image/png;base64," + userImage;
+        }
+      });
+    } else {
+      // No user is signed in.
+      console.log("No user is signed in");
+    }
+  });
+}
+showProfilePic();
