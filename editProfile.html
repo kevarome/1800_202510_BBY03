@@ -72,11 +72,23 @@
                 </div>
                 <div class="form-group">
                     <label >Age</label>
-                    <input type="text" id="ageInput" class="form-control" placeholder="Enter your age">
+                    <select id="ageInput" class="form-control" required>
+                        <option value="" disabled selected>Select your age</option>
+                    </select>
+                    <!-- <input type="text" id="ageInput" class="form-control" placeholder="Enter your age" max="120" min="0" required> -->
                 </div>
-                <div class="form-group">
-                    <label >Gender</label>
-                    <input type="text" id="genderInput" class="form-control" placeholder="Enter your gender">
+                <div class="form-group" style="margin-bottom: 20px;">
+                    <label >Gender</label><br>
+                    <div style="display: inline-block; margin-right: 20px;">
+                        <input type="radio" id="male" name="gender" value="Male">Male
+                    </div>
+                    <div style="display: inline-block; margin-right: 20px;">
+                        <input type="radio" id="female" name="gender" value="Female">Female
+                    </div>
+                    <div style="display: inline-block; margin-right: 20px;">
+                        <input type="radio" id="other" name="gender" value="Other">Other
+                    </div>
+                   
                 </div>
             </fieldset>
             <div class="d-flex justify-content-end mt-5">
@@ -84,6 +96,7 @@
                 <span style="width: 10px"></span>
                 <button type="button" class="btn btn-info" id="savebtn">Save</button>
             </div>
+            <div id="saveMessage" style="display: none; padding: 10px; margin-top: 10px;"></div>
         </form>
 </div>
     <!-- stuff -->

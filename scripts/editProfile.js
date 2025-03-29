@@ -29,10 +29,16 @@ function populateUserInfo() {
           document.getElementById("ageInput").value = userAge;
         }
         if (userGender != null) {
-          document.getElementById("genderInput").value = userGender;
+          let genderRadios = document.getElementsByName("gender");
+          for (let radio of genderRadios) {
+            if (radio.value === userGender) {
+              radio.checked = true; // Set checked gender
+            }
+          }
         }
         if (userImage != null) {
-          document.getElementById("uploadPhoto").src = "data:image/png;base64," + userImage;
+          document.getElementById("uploadPhoto").src =
+            "data:image/png;base64," + userImage;
         }
       });
     } else {
@@ -50,7 +56,8 @@ function save() {
   let userEmail = document.getElementById("emailInput").value;
   let userPhone = document.getElementById("phoneInput").value;
   let userAge = document.getElementById("ageInput").value;
-  let userGender = document.getElementById("genderInput").value;
+  let userGender =
+    document.querySelector('input[name="gender"]:checked')?.value || "";
   let userImage = document.getElementById("fileInput").src;
 
   if (currentUser) {
@@ -65,7 +72,11 @@ function save() {
       })
       .then(() => {
         document.getElementById("personalInfoFields").disabled = true;
+
+        // Show success message
+        showMessage("Your information has been saved successfully!", "success");
       })
+
       .catch((error) => {
         console.error("error：", error);
       });
@@ -147,3 +158,37 @@ function uploadImage() {
   }
 }
 uploadImage();
+
+// Generate options from 0 to 120
+const select = document.getElementById("ageInput");
+for (let i = 0; i <= 120; i++) {
+  let option = document.createElement("option");
+  option.value = i;
+  option.textContent = i;
+  select.appendChild(option);
+}
+
+// Function to display the message
+function showMessage(message, type) {
+  const messageContainer = document.getElementById("saveMessage");
+
+  // Clear any previous messages
+  messageContainer.textContent = message;
+
+  // Style the message based on type (success or error)
+  if (type === "success") {
+    messageContainer.style.backgroundColor = "grey";
+    messageContainer.style.color = "white";
+  } else {
+    messageContainer.style.backgroundColor = "red";
+    messageContainer.style.color = "white";
+  }
+
+  // Show the message container
+  messageContainer.style.display = "block";
+
+  // Hide the message after 3 seconds
+  setTimeout(() => {
+    messageContainer.style.display = "none";
+  }, 3000);
+}
