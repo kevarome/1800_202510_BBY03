@@ -9,13 +9,34 @@ function loadSkeleton() {
 		        // If the "user" variable is not null, then someone is logged in
             // User is signed in.
             // Do something for the user here.
-            console.log($('#navbarPlaceholder').load('./text/nav_after_login.html'));
-            console.log($('#footerPlaceholder').load('./text/footer.html'));
+            $('#navbarPlaceholder').load('./text/nav_after_login.html', function (response, status, xhr) {
+                if (status === "error") {
+                    console.error(" Navbar (after login) failed to load:", xhr.status, xhr.statusText);
+                } else {
+                    console.log(" Navbar (after login) loaded.");
+                }
+            });
+
         } else {
             // No user is signed in.
-            console.log($('#navbarPlaceholder').load('./text/nav_before_login.html'));
-            console.log($('#footerPlaceholder').load('./text/footer.html'));
+            $('#navbarPlaceholder').load('./text/nav_before_login.html', function (response, status, xhr) {
+                if (status === "error") {
+                    console.error(" Navbar (before login) failed to load:", xhr.status, xhr.statusText);
+                } else {
+                    console.log(" Navbar (before login) loaded.");
+                }
+            });
         }
+
+        // Footer always loads
+        $('#footerPlaceholder').load('./text/footer.html', function (response, status, xhr) {
+            if (status === "error") {
+                console.error(" Footer failed to load:", xhr.status, xhr.statusText);
+            } else {
+                console.log(" Footer loaded.");
+            }
+        });
     });
 }
+
 loadSkeleton(); //invoke the function
