@@ -55,7 +55,6 @@ document.addEventListener('DOMContentLoaded', function () {
               modal.show();
             }
           });
-
           calendar.render();
         })
         .catch((error) => {

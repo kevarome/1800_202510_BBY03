@@ -1,7 +1,5 @@
-/* ===== Google Font (اختياري لو حبيت تضيفه في <head>) ===== */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
 
-/* ===== الخط العام وخلفية الصفحة ===== */
 body {
   font-family: 'Inter', sans-serif;
   background-color: #f5f7fa;
@@ -11,14 +9,12 @@ body {
   min-height: 100vh;
 }
 
-/* ===== رأس الصفحة ===== */
 h2 {
   font-weight: 600;
   color: #1a1a1a;
   margin-bottom: 1rem;
 }
 
-/* ===== شكل الكالندر نفسه ===== */
 #calendar {
   background-color: #ffffff;
   padding: 20px;
@@ -29,7 +25,6 @@ h2 {
   transition: all 0.3s ease;
 }
 
-/* ===== زر اليوم والتنقلات ===== */
 .fc-button {
   background-color: #e7f0fa;
   border: none;
@@ -49,14 +44,12 @@ h2 {
   background-color: #d0e2f5;
 }
 
-/* ===== عنوان الشهر ===== */
 .fc-toolbar-title {
   font-size: 1.4rem;
   font-weight: 500;
   color: #1c1c1c;
 }
 
-/* ===== الأحداث (الدواء) ===== */
 .fc-event {
   background-color: #0d6efd !important;
   color: #ffffff !important;
@@ -69,13 +62,11 @@ h2 {
   box-shadow: 0 2px 6px rgba(13, 110, 253, 0.2);
 }
 
-/* ===== اليوم الحالي (highlight) ===== */
 .fc-day-today {
   background-color: #f3f8ff !important;
   border: 1px solid #cfe2ff;
 }
 
-/* ===== النصوص الصغيرة في التقويم ===== */
 .fc-col-header-cell-cushion,
 .fc-daygrid-day-number {
   color: #2c3e50;
@@ -83,7 +74,6 @@ h2 {
   text-decoration: none;
 }
 
-/* ===== إزالة رسالة الرخصة ===== */
 .fc-license-message {
   display: none;
 }
