@@ -43,7 +43,6 @@ document.addEventListener('DOMContentLoaded', function () {
             events: events,
 
             eventClick: function (info) {
-              // تعبئة بيانات المودال
               document.getElementById('modalName').textContent = info.event.title;
               document.getElementById('modalDosage').textContent = info.event.extendedProps.dosage || '';
               document.getElementById('modalType').textContent = info.event.extendedProps.dosageType || '';
@@ -52,7 +51,6 @@ document.addEventListener('DOMContentLoaded', function () {
               document.getElementById('modalInterval').textContent = info.event.extendedProps.intakeInterval || '';
               document.getElementById('modalNotes').textContent = info.event.extendedProps.notes || '';
 
-              // إظهار المودال
               const modal = new bootstrap.Modal(document.getElementById('medDetailsModal'));
               modal.show();
             }
