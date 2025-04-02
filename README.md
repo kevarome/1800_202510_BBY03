@@ -1,60 +1,95 @@
 
 # Project Name
+Meditrack
 
+---
 
 ## Overview
 Summarize your project's purpose, problem solved, key features, user benefits, development context, and main technologies used.
 
-Example:
-
-This client-side JavaScript web application provides real-time weather updates for cities worldwide. It simplifies accessing weather information through an intuitive mobile-first interface, allowing users to input a city name and receive data on temperature, humidity, and conditions.
-
-Developed for the [Course Name] course, applying User-Centred Design practices, agile project management processes, integrating a weather API, and Firebase backend services.
+Meditrack is a user-friendly mobile application designed to help individuals, especially the elderly, manage their medication schedules effectively. By sending automated notifications for both medication intake and refill reminders, Meditrack eliminates the need for outdated methods like memorization or sticky notes. 
 
 ---
 
-## Features
-
-Example:
-- Real-time weather updates for any city.
-- Responsive design for desktop and mobile.
-- Displays temperature, humidity, and weather conditions.
+## Key Features
+- A built-in calendar that allows users to track their medication history and view upcoming does.
+- The photo function allows users to take a photo of their medication.
 
 ---
 
 ## Technologies Used
 
-Example:
-- **Frontend**: HTML, CSS, JavaScript
-- **Backend**: Firebase for hosting
-- **Database**: Firestore
-- **API**: OpenWeatherMap API
+For this project our team has chosen a variety of software and tools to bring the project to completion:
+-HTML5 to present the content on the web. It’s widely supported across all browsers making the obvious choice for building web content.
+-CSS to style and format the appearance of HTML elements on our web app. 
+-JavaScript for the interactive web elements.
+-Bootstrap provides a front-end framework for web development. It simplifies the process of building responsive and visually appealing websites -with a collection of ready-made HTML, CSS and JavaScript components.
+-Trello as a project management tool to organize tasks for sprints.
+-Discord for communication and file sharing.
+-Figma for real-time collaboration on the design and prototyping for user interface (UI) and user experience (UX). 
+-Firebase and Firestore as a backend-as-a-service (BaaS) to provide database, authentication, and hosting.
+-Visual Studio Code as our main code editor.
+-Github to host, share and collaborate on our project code repository. It is a convenient tool that allows us to track changes, revert to previous -versions and manage the project with multiple contributors.
+We are using the memberships for the software that is readily available to students. No paid versions or subscriptions are being used.
 
 ---
-
 ## Usage
 
 Example:
 1. Open your browser and visit `http://localhost:3000`.
-2. Enter the name of the city in the search bar and press enter.
-3. View the weather information displayed on the screen.
+2. Enter your username and password to login.
+3. Click the add button to add new medicine
+4. Click the calendor button to see your medicine history.
+5. Click the profile button to see your profile and click the edit button to change your profile.
 
 ---
 
 ## Project Structure
 
-Example:
-```
 project-name/
-├── src/
-│   ├── index.html
-│   ├── style.css
-│   ├── app.js
-│   └── components/
-├── package.json
-├── README.md
-└── .gitignore
-```
+├── images/
+│   ├── BBY01.jpg
+│   ├── loginPic.jpg
+│   ├── loginPic.jpg
+│   └── logo.jpg
+    └── logo.png
+    └── meditrackWelcome.jpg
+    └── NV01.jpg
+├── scripts
+    └── authentication.js
+    └── calendar.js
+    └── camera.js
+    └── editProfile.js
+    └── firebaseAPI_BBY03.js
+    └── main.js
+    └── medication.js
+    └── profile.js
+    └── script.js
+    └── skeletion.js
+
+├── styles
+    └── # cameraStyle.css
+    └── # style.css
+
+└── text
+    └── footer.html
+    └── nav_after_login.html
+    └── nav_before_login.html
+|__.gitignore
+|__4785.webp
+|__calendar.html
+|__camera.html
+|__editProfile.html
+|__index.html
+|__login.html
+|__logout.html
+|__main.html
+|__medication_form.html
+|__README.md
+|__signUp.html
+|__template.html
+|__thanks.html
+
 
 ---
 
@@ -67,29 +102,25 @@ project-name/
 ## Acknowledgments
 
 Example:
-- Weather data sourced from [OpenWeatherMap](https://openweathermap.org/).
-- Code snippets for ___ algoirthm were adapted from resources such as [Stack Overflow](https://stackoverflow.com/) and [MDN Web Docs](https://developer.mozilla.org/).
+- Calendar for JavaScript libary.
+- Nav bar, reminder table, medication form and the profile page are from bootstrap.
 - Icons sourced from [FontAwesome](https://fontawesome.com/) and images from [Unsplash](https://unsplash.com/).
 
 ---
 
 ## Limitations and Future Work
+
 ### Limitations
 
-Example:
-- Currently, the app only supports city-based weather searches.
-- Limited to basic weather parameters like temperature, humidity, and conditions.
-- The user interface can be further enhanced for accessibility.
+- Can only be used in English version
+- Limited to single word medication name.
+- You can't change the 24 hour time to a AM/PM clock.
 
 ### Future Work
 
-Example: 
-- Add support for location-based weather detection using GPS.
-- Implement additional weather parameters like wind speed and UV index.
-- Create a dark mode for better usability in low-light conditions.
-- Integrate user accounts for saving favorite locations.
-
----
+- Finalize user interface elements
+- Clean up reminder tables 
+- Integrate outstanding back-end functions.
 
 ## License
 
