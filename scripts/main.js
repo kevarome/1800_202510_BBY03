@@ -12,32 +12,6 @@ function insertNameFromFirestore() {
 }
 insertNameFromFirestore();
 
-// Load email
-function insertEmailFromFirestore() {
-  firebase.auth().onAuthStateChanged(user => {
-    if (user) {
-      db.collection("users").doc(user.uid).get().then(userDoc => {
-        const email = userDoc.data().email;
-        document.getElementById("email-goes-here").innerText = email;
-      });
-    }
-  });
-}
-insertEmailFromFirestore();
-
-// Load phone
-function insertPhoneFromFirestore() {
-  firebase.auth().onAuthStateChanged(user => {
-    if (user) {
-      db.collection("users").doc(user.uid).get().then(userDoc => {
-        const phone = userDoc.data().phone;
-        document.getElementById("phone-goes-here").innerText = phone;
-      });
-    }
-  });
-}
-insertPhoneFromFirestore();
-
 // Load age
 function insertAgeFromFirestore() {
   firebase.auth().onAuthStateChanged(user => {
@@ -64,18 +38,6 @@ function insertGenderFromFirestore() {
 }
 insertGenderFromFirestore();
 
-// Load profile image (text or image src, adjust accordingly)
-function callImageFromFirestore() {
-  firebase.auth().onAuthStateChanged(user => {
-    if (user) {
-      db.collection("users").doc(user.uid).get().then(userDoc => {
-        const imageUrl = userDoc.data().profileImage;
-        document.getElementById("profileImage-goes-here").innerText = imageUrl; // or .src = imageUrl;
-      });
-    }
-  });
-}
-callImageFromFirestore();
 
 // Load medications into table
 function loadMedicationsFromFirestore() {
@@ -95,6 +57,11 @@ function loadMedicationsFromFirestore() {
         querySnapshot.forEach(doc => {
           const data = doc.data();
 
+            // Create a new table row and set its attributes
+            // to include the medication data as a JSON string.
+            // This allows us to easily retrieve the data when the row is clicked.
+            // The row is given a class of "table-light" for styling.
+            // The row is also given a "data-med" attribute that contains the medication data as a JSON string.
           const row = document.createElement("tr");
           row.classList.add("table-light");
           row.setAttribute("data-med", JSON.stringify(data));
@@ -107,6 +74,7 @@ function loadMedicationsFromFirestore() {
             <td>${data.dosage || "N/A"} ${data.dosageType || ""}</td>
             <td>${data.timeToTake || "Not set"}</td>
           `;
+
 
           tableBody.appendChild(row);
         });
@@ -124,11 +92,19 @@ function setupModalClickListener() {
   const tableBody = document.getElementById("medication-table-body");
 
   tableBody.addEventListener("click", function (e) {
+    // Ignore clicks on checkboxes
+    // if the checkbox is clicked, we don't want to open the modal
     if (e.target.tagName === "INPUT") return;
 
+    // Find the closest row to the clicked element
+    // and get the medication data from its attribute
+    // If the clicked element is not a table row, return
+    // and do nothing.
     const clickedRow = e.target.closest("tr");
     if (!clickedRow) return;
 
+    // Get the medication data from the row's attribute
+    // and parse it as JSON.
     const data = JSON.parse(clickedRow.getAttribute("data-med"));
 
     document.getElementById("modalName").textContent = data.medicineName || "N/A";
