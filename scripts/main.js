@@ -1,5 +1,4 @@
-
-    // Load user name
+// Load user name
 function insertNameFromFirestore() {
   firebase.auth().onAuthStateChanged(user => {
     if (user) {
@@ -53,33 +52,32 @@ function loadMedicationsFromFirestore() {
           console.log("No medications found.");
           return;
         }
-
+          // Create a new table row and set its attributes
+          // to include the medication data as a JSON string.
+          // This allows us to easily retrieve the data when the row is clicked.
+          // The row is given a class of "table-light" for styling.
+          // The row is also given a "data-med" attribute that contains the medication data as a JSON string.
         querySnapshot.forEach(doc => {
           const data = doc.data();
-
-            // Create a new table row and set its attributes
-            // to include the medication data as a JSON string.
-            // This allows us to easily retrieve the data when the row is clicked.
-            // The row is given a class of "table-light" for styling.
-            // The row is also given a "data-med" attribute that contains the medication data as a JSON string.
+        
           const row = document.createElement("tr");
-          row.classList.add("table-light");
+          row.classList.add("table-light", "medication-row"); 
           row.setAttribute("data-med", JSON.stringify(data));
-
+        
           row.innerHTML = `
             <th scope="row">
-              <input class="form-check-input me-0" type="checkbox" />
+              <input class="form-check-input me-0 status-checkbox" type="checkbox" />
             </th>
             <td>${data.medicineName || "N/A"}</td>
             <td>${data.dosage || "N/A"} ${data.dosageType || ""}</td>
             <td>${data.timeToTake || "Not set"}</td>
           `;
-
-
+        
           tableBody.appendChild(row);
         });
 
         setupModalClickListener();
+
       }).catch(error => {
         console.error("Error loading medications:", error);
       });
@@ -120,10 +118,32 @@ function setupModalClickListener() {
   });
 }
 
-
-
 // Page load setup
 document.addEventListener("DOMContentLoaded", () => {
   console.log("DOM fully loaded");
   loadMedicationsFromFirestore();
+
+
+  // Set up the event listener for the status checkboxes
+  // This listener will be triggered when the checkbox is checked or unchecked.
+  // It will find the closest table row and apply the appropriate styles.
+
+  document.addEventListener("change", function (e) {
+    // Check if the clicked element is a checkbox
+    if (e.target.classList.contains("status-checkbox")) {
+
+      // Find the closest table row to the checkbox
+      const row = e.target.closest("tr");
+      
+      if (e.target.checked) {
+        // If the checkbox is checked, apply the styles to the row
+        row.style.textDecoration = "line-through";
+        row.style.opacity = "0.6";
+      } else {
+        // If the checkbox is unchecked, remove the styles from the row
+        row.style.textDecoration = "none"; 
+        row.style.opacity = "1";
+      }
+    }
+  });
 });
