@@ -61,7 +61,7 @@
     <div class="container bg-light p-5">
       <h1 class="display-4">Hello, <span id="name-goes-here"></span></h1>
       <h1>_____________________</h1>
-      <h2 class="display-5">Happy <span id="dateDisplay" >Loading...</span></h2>
+      <h2 class="display-5">Happy <span id="dateDisplay">Loading...</span></h2>
     </div>
   </div>
 
@@ -131,55 +131,59 @@
 
   </table>
 
-<div class="modal fade" id="medDetailsModal" tabindex="-1" aria-labelledby="medDetailsModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-    
-      <div class="modal-header">
-        <h5 class="modal-title" id="medDetailsModalLabel">Medication Details</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
+  <div class="modal fade" id="medDetailsModal" tabindex="-1" aria-labelledby="medDetailsModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
 
-      <div class="modal-body">
-        <div class="mb-2">
-          <label><strong>Name:</strong></label>
-          <input type="text" class="form-control" id="medName" readonly>
+        <div class="modal-header">
+          <h5 class="modal-title" id="medDetailsModalLabel">Medication Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="mb-2">
-          <label><strong>Dosage:</strong></label>
-          <input type="text" class="form-control" id="medDosage" readonly>
-        </div>
-        <div class="mb-2">
-          <label><strong>Dosage Type:</strong></label>
-          <input type="text" class="form-control" id="medType" readonly>
-        </div>
-        <div class="mb-2">
-          <label><strong>Start Date:</strong></label>
-          <input type="date" class="form-control" id="medStart" readonly>
-        </div>
-        <div class="mb-2">
-          <label><strong>End Date:</strong></label>
-          <input type="date" class="form-control" id="medEnd" readonly>
-        </div>
-        <div class="mb-2">
-          <label><strong>Interval (hours):</strong></label>
-          <input type="number" class="form-control" id="medInterval" readonly>
-        </div>
-        <div class="mb-2">
-          <label><strong>Notes:</strong></label>
-          <textarea class="form-control" id="medNotes" rows="2" readonly></textarea>
-        </div>
-      </div>
 
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" id="editMedBtn">Edit</button>
-        <button type="button" class="btn btn-danger d-none" id="deleteMedBtn">Delete</button>
-        <button type="button" class="btn btn-primary d-none" id="saveMedBtn">Save</button>
-      </div>
+        <div class="modal-body">
+          <div class="mb-2">
+            <label><strong>Name:</strong></label>
+            <input type="text" class="form-control" id="medName" readonly>
+          </div>
+          <div class="mb-2">
+            <label><strong>Dosage:</strong></label>
+            <input type="text" class="form-control" id="medDosage" readonly>
+          </div>
+          <div class="mb-2">
+            <label><strong>Dosage Type:</strong></label>
+            <input type="text" class="form-control" id="medType" readonly>
+          </div>
+          <div class="mb-2">
+            <label><strong>Start Date:</strong></label>
+            <input type="date" class="form-control" id="medStart" readonly>
+          </div>
+          <div class="mb-2">
+            <label><strong>End Date:</strong></label>
+            <input type="date" class="form-control" id="medEnd" readonly>
+          </div>
+          <div class="mb-2">
+            <label><strong> Time to take </strong></label>
+            <input type="text" class="form-control" id="timeToTake" readonly>
+          </div>
+          <div class="mb-2">
+            <label><strong>Interval (hours):</strong></label>
+            <input type="number" class="form-control" id="medInterval" readonly>
+          </div>
+          <div class="mb-2">
+            <label><strong>Notes:</strong></label>
+            <textarea class="form-control" id="medNotes" rows="2" readonly></textarea>
+          </div>
+        </div>
 
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" id="editMedBtn">Edit</button>
+          <button type="button" class="btn btn-danger d-none" id="deleteMedBtn">Delete</button>
+          <button type="button" class="btn btn-primary d-none" id="saveMedBtn">Save</button>
+        </div>
+
+      </div>
     </div>
   </div>
-</div>
 
   <!-- our own footer goes here-->
   <nav id="footerPlaceholder"></nav>

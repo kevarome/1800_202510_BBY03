@@ -139,6 +139,8 @@ function setupModalClickListener() {
     $("#medDosage").val(data.dosage || "N/A");
     $("#medType").val(data.dosageType || "N/A");
     $("#medStart").val(data.startDate || "N/A");
+    $("#timeToTake").val(data.timeToTake || "N/A");
+
     $("#medEnd").val(data.endDate || "N/A");
     $("#medInterval").val(data.intakeInterval || "N/A");
     $("#medNotes").val(data.notes || "N/A");
