@@ -14,13 +14,14 @@ function addMedication() {
     // Getting form values
     let medicineName = document.getElementById('medicineName').value;
     let intakeInterval = document.getElementById('intakeInterval').value;
+    let timeToTake = document.getElementById('timeToTake').value;
     let dosage = document.getElementById('dosage').value;
     let dosageType = document.getElementById('dosageType').value;
     let startDate = document.getElementById('startDate').value;
     let endDate = document.getElementById('endDate').value;
     let notes = document.getElementById('notes').value;
 
-    console.log(medicineName, intakeInterval, dosage, startDate, endDate, notes);
+    console.log(medicineName, intakeInterval, timeToTake, dosage, startDate, endDate, notes);
 
     var user = firebase.auth().currentUser;
     if (user) {
@@ -30,6 +31,7 @@ function addMedication() {
     db.collection('users').doc(user.uid).collection('medications').add({
       medicineName: medicineName,
       intakeInterval: intakeInterval,
+      timeToTake: timeToTake,
       dosage: dosage,
       dosageType: dosageType,
       startDate: startDate,
