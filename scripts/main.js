@@ -78,26 +78,26 @@ function loadMedicationsFromFirestore() {
           console.log("No medications found.");
           return;
         }
+        // Create a new table row and set its attributes
+        // to include the medication data as a JSON string.
+        // This allows us to easily retrieve the data when the row is clicked.
+        // The row is given a class of "table-light" for styling.
+        // The row is also given a "data-med" attribute that contains the medication data as a JSON string.
+        querySnapshot.forEach(doc => {
+          const data = doc.data();
+          data.id = doc.id;
+
           // Create a new table row and set its attributes
           // to include the medication data as a JSON string.
           // This allows us to easily retrieve the data when the row is clicked.
           // The row is given a class of "table-light" for styling.
           // The row is also given a "data-med" attribute that contains the medication data as a JSON string.
-        querySnapshot.forEach(doc => {
-          const data = doc.data();
-          data.id = doc.id;
 
-            // Create a new table row and set its attributes
-            // to include the medication data as a JSON string.
-            // This allows us to easily retrieve the data when the row is clicked.
-            // The row is given a class of "table-light" for styling.
-            // The row is also given a "data-med" attribute that contains the medication data as a JSON string.
 
-        
           const row = document.createElement("tr");
-          row.classList.add("table-light", "medication-row"); 
+          row.classList.add("table-light", "medication-row");
           row.setAttribute("data-med", JSON.stringify(data));
-        
+
           row.innerHTML = `
             <th scope="row">
               <input class="form-check-input me-0 status-checkbox" type="checkbox" />
@@ -106,7 +106,7 @@ function loadMedicationsFromFirestore() {
             <td>${data.dosage || "N/A"} ${data.dosageType || ""}</td>
             <td>${data.timeToTake || "Not set"}</td>
           `;
-        
+
           tableBody.appendChild(row);
         });
 
@@ -177,14 +177,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Find the closest table row to the checkbox
       const row = e.target.closest("tr");
-      
+
       if (e.target.checked) {
         // If the checkbox is checked, apply the styles to the row
         row.style.textDecoration = "line-through";
         row.style.opacity = "0.6";
       } else {
         // If the checkbox is unchecked, remove the styles from the row
-        row.style.textDecoration = "none"; 
+        row.style.textDecoration = "none";
         row.style.opacity = "1";
       }
     }
@@ -199,3 +199,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+//Display date//
+const today = new Date();
+
+    // Function to add ordinal suffix
+    function getOrdinal(day) {
+      if (day > 3 && day < 21) return day + "th";
+      switch (day % 10) {
+        case 1: return day + "st";
+        case 2: return day + "nd";
+        case 3: return day + "rd";
+        default: return day + "th";
+      }
+    }
+
+    const weekday = today.toLocaleDateString(undefined, { weekday: 'long' });
+    const month = today.toLocaleDateString(undefined, { month: 'long' });
+    const day = today.getDate();
+    const year = today.getFullYear();
+
+    const formatted = `${weekday}, ${month} ${getOrdinal(day)}, ${year}`;
+
+    document.getElementById('dateDisplay').textContent = formatted;
+// Display in the HTML element
+document.getElementById('dateDisplay').textContent = formattedDate;
