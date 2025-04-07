@@ -184,3 +184,11 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// Page load setup
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("DOM fully loaded");
+  if (document.querySelector("#medication-table-body")) {
+  }
+
+});
+
