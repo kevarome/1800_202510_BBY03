@@ -36,10 +36,7 @@ function showProfilePic() {
       //get the document for current user.
       currentUser.get().then((userDoc) => {
         //get the data fields of the user
-
         let userImage = userDoc.data().profileImage;
-
-
         if (userImage != null) {
           document.getElementById("uploadPhoto").src = "data:image/png;base64," + userImage;
         }

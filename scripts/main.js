@@ -86,6 +86,13 @@ function loadMedicationsFromFirestore() {
         querySnapshot.forEach(doc => {
           const data = doc.data();
           data.id = doc.id;
+
+            // Create a new table row and set its attributes
+            // to include the medication data as a JSON string.
+            // This allows us to easily retrieve the data when the row is clicked.
+            // The row is given a class of "table-light" for styling.
+            // The row is also given a "data-med" attribute that contains the medication data as a JSON string.
+
         
           const row = document.createElement("tr");
           row.classList.add("table-light", "medication-row"); 

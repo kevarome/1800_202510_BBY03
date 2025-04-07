@@ -105,6 +105,7 @@ Example:
 - Calendar for JavaScript libary.
 - Nav bar, reminder table, medication form and the profile page are from bootstrap.
 - Icons sourced from [FontAwesome](https://fontawesome.com/) and images from [Unsplash](https://unsplash.com/).
+- Use copilot and chatgpt to generate comments and suggest solution
 
 ---
 
