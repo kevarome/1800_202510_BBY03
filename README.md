@@ -1,19 +1,19 @@
 
 # Project Name
-Meditrack
+Meditrak
 
 ---
 
 ## Overview
-Summarize your project's purpose, problem solved, key features, user benefits, development context, and main technologies used.
 
-Meditrack is a user-friendly mobile application designed to help individuals, especially the elderly, manage their medication schedules effectively. By sending automated notifications for both medication intake and refill reminders, Meditrack eliminates the need for outdated methods like memorization or sticky notes. 
+Meditrack is a user-friendly mobile application designed to help individuals, especially the elderly, manage their medication schedules effectively. Meditrack eliminates the need for outdated methods like memorization or sticky notes. 
 
 ---
 
 ## Key Features
+- Reminders page as the homepage when user logs in.
 - A built-in calendar that allows users to track their medication history and view upcoming does.
-- The photo function allows users to take a photo of their medication.
+- A smple design that is easy to use and understand.
 
 ---
 
@@ -36,11 +36,11 @@ We are using the memberships for the software that is readily available to stude
 ## Usage
 
 Example:
-1. Open your browser and visit `http://localhost:3000`.
-2. Enter your username and password to login.
-3. Click the add button to add new medicine
-4. Click the calendor button to see your medicine history.
-5. Click the profile button to see your profile and click the edit button to change your profile.
+1. Open your browser and visit https://bby03-23732.web.app/
+2. Enter your username and password to login, or sign-up.
+3. Click the add button to add a new medication.
+4. Click the calendor button to see your medication schedule for the month.
+5. Click the profile button to see your profile and click the edit button to change your profile details.
 
 ---
 
@@ -90,14 +90,14 @@ project-name/
 |__template.html
 |__thanks.html
 
+*Firestore files not included in project structure
 
 ---
 
 ## Contributors
-- Abdullah  - CST student at BCIT, love algorithms, excited to learn more about tech world.
-- Hi I am Qian Zhang I really love work with my teammates and I love hiking.
-- Hola my name is Kevin - I'm excited to launch our app to the world. 
-
+- Kevin Romero - I like learning code and I am excited to develop apps. 
+- Abdullah Al Asmy  - CST student at BCIT, love algorithms, excited to learn more about tech world.
+- Qian Zhang  - I really love work with my teammates and I love hiking.
 
 ## Acknowledgments
 
@@ -113,17 +113,16 @@ Example:
 
 ### Limitations
 
-- Can only be used in English version
+- Can only be used in used in the English Language
 - Limited to single word medication name.
-- You can't change the 24 hour time to a AM/PM clock.
+- Can't upload a large image file for the profile picture.
+
 
 ### Future Work
-
+- Set up the notification feature where users will ge alerted on their devices to take their medication.
 - Finalize user interface elements
 - Clean up reminder tables 
 - Integrate outstanding back-end functions.
 
 ## License
-
-Example:
-This project is licensed under the MIT License. See the LICENSE file for details.
+No paid subscriptions or licenses were used.
