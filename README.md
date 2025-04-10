@@ -100,10 +100,11 @@ project-name/
 ## Acknowledgments
 
 Example:
-- Calendar for JavaScript libary.
+- Calendar from JavaScript libary.
 - Nav bar, reminder table, medication form and the profile page are from bootstrap.
 - Icons sourced from [FontAwesome](https://fontawesome.com/) and images from [Unsplash](https://unsplash.com/).
-- Use copilot and chatgpt to generate comments and suggest solution
+- Used copilot and chatgpt to generate comments and suggest solution
+- Firebase and firestore for database and storage
 
 ---
 
@@ -112,8 +113,8 @@ Example:
 ### Limitations
 
 - Can only be used in used in the English Language
-- Limited to single word medication name.
 - Can't upload a large image file for the profile picture.
+- Navbar can only be used in mobile view, not full screen.
 
 
 ### Future Work
