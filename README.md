@@ -48,13 +48,11 @@ Example:
 
 project-name/
 ├── images/
-│   ├── BBY01.jpg
 │   ├── loginPic.jpg
 │   ├── loginPic.jpg
 │   └── logo.jpg
     └── logo.png
     └── meditrackWelcome.jpg
-    └── NV01.jpg
 ├── scripts
     └── authentication.js
     └── calendar.js
@@ -120,6 +118,7 @@ Example:
 
 ### Future Work
 - Set up the notification feature where users will ge alerted on their devices to take their medication.
+- Add dropdown menu to choose a "Time to take" time, instead of typing a time, 
 - Finalize user interface elements
 - Clean up reminder tables 
 - Integrate outstanding back-end functions.

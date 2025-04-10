@@ -1,3 +1,4 @@
+// JavaScript for Camera that was not implemented
 // Select elements
 const video = document.getElementById('video');
 const canvas = document.getElementById('canvas');

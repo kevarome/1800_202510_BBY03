@@ -27,6 +27,8 @@ firebase.auth().onAuthStateChanged(user => {
     }
 });
 var currentUser; //points to the document of the user who is logged in
+
+// Shows new uploaded profile pic
 function showProfilePic() {
   firebase.auth().onAuthStateChanged((user) => {
     // Check if user is signed in:
